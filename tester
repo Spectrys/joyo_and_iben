@@ -1,0 +1,34 @@
+# test_imports.py
+print("Testing imports...")
+
+try:
+    from models.student import Student
+    print("✓ Student")
+except Exception as e:
+    print(f"✗ Student: {e}")
+
+try:
+    from models.assistant import AssistantModel
+    print("✓ AssistantModel")
+except Exception as e:
+    print(f"✗ AssistantModel: {e}")
+
+try:
+    from models.subject_model import SubjectModel
+    print("✓ SubjectModel")
+except Exception as e:
+    print(f"✗ SubjectModel: {e}")
+
+try:
+    from controllers.assistant_controller import read_assistants, create_assistant, delete_assistant
+    print("✓ assistant_controller")
+except Exception as e:
+    print(f"✗ assistant_controller: {e}")
+
+try:
+    from controllers.subject_controller import read_subjects, create_subject, delete_subject
+    print("✓ subject_controller")
+except Exception as e:
+    print(f"✗ subject_controller: {e}")
+
+print("\n✅ All imports successful!" if all else "⚠️ Some imports failed")
